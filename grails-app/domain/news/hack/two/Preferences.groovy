@@ -1,13 +1,13 @@
 package news.hack.two
 
-class Context {
+class Preferences {
 
     //User user;
 
     int happy
     int sad
     int optimistic
-    int pesimistic
+    int pessimistic
     int hopeful
     int fearful
     int amused

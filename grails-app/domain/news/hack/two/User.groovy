@@ -4,11 +4,11 @@ class User {
 
     String login
 
-    Context ready
-    Context move
-    Context needbreak
-    Context end
-    Context surprise
+    Preferences ready
+    Preferences move
+    Preferences needbreak
+    Preferences end
+    Preferences surprise
 
     //static hasOne = [ready:Context, move:Context, needbreak:Context, end:Context, surprise:Context]
 

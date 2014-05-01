@@ -1,4 +1,11 @@
 <div id="home_page">
+
     <button ng-click="signup()">Sign Up as marcos.carceles@gmail.com</button>
-    <div ng-repeat="item in items" class="item item_{{item.id}}" ng-click="enterIndex($index)"><div class="grey_border">{{item.mood}}</div></div>
+
+    <div class="item item_1" ng-click="enterIndex('ready')"><div class="grey_border">Ready for a new day</div></div>
+    <div class="item item_2" ng-click="enterIndex('move')"><div class="grey_border">On the move</div></div>
+    <div class="item item_3" ng-click="enterIndex('needbreak')"><div class="grey_border">Need a break</div></div>
+    <div class="item item_4" ng-click="enterIndex('end')"><div class="grey_border">End of the day</div></div>
+    <div class="item item_5" ng-click="enterIndex('surprise')"><div class="grey_border">Surprise me!</div></div>
+
 </div>

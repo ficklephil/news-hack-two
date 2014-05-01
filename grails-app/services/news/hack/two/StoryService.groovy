@@ -2,8 +2,10 @@ package news.hack.two
 
 class StoryService {
 
-    List getStoriesByMood(def preferences) {
+    List getStoriesByMood(int userId, String context) {
         List stories = Story.list(max:100, sort:"publishDate", order:"desc");
+
+        Preferences preferences = User.get(userId)[context]
 
         stories.each { story ->
             calculateScore(story, preferences)
@@ -15,12 +17,18 @@ class StoryService {
         }
     }
 
-    def rateStory(int storyId, String mood) {
+    def rateStory(int storyId, String mood, int userId, String context, int vote) {
 
         if (! (mood in Mood.values()*.toString()) ) {
             log.error("Unrecognised mood!!!");
             return;
         }
+
+        def user = User.get(userId);
+        user[context][mood] += vote
+        user[context].total += 1
+        user[context].save()
+
         def story = Story.get(storyId)
 
         if (!story) {
@@ -34,7 +42,7 @@ class StoryService {
 
     }
 
-    private int calculateScore(Story story, Map preferences) {
+    private int calculateScore(Story story, Preferences preferences) {
         double score = 0.0
         Mood.values()*.toString().each { mood ->
             score += (preferences[mood] as Double) * story[mood]/story.ratings
