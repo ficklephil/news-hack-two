@@ -1,0 +1,28 @@
+#vote{
+    background: #EFE5C6;
+}
+
+#vote .mood-container{
+    /*border:1px solid red;*/
+    padding: 15px;
+    height:235px;
+}
+
+#vote a{
+    /*border:1px solid red;*/
+    background: #BCD700;
+    height: 40px;
+    border-radius: 9px;
+    font-size:1.5em;
+    float:left;
+    padding: 10px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+#vote a:link{
+    color: #efefef;
+    text-decoration:none;
+}
+
+
