@@ -2,7 +2,15 @@
     background: #EFE5C6;
 }
 
+
+#story_page .keyword{
+    font-size: 1.8em;
+}
+
+
 #story_page .voting_bar {
+    font-family: 'Roboto Slab';
+    color: #EFE5C4;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -16,11 +24,11 @@
     bottom: 0;
     left: 50%;
     right: 0;
-    background: #BCD100;
+    background: #9FB400;
     cursor: pointer;
-    padding-top:30px;
+    padding-top:18px;
     text-align: center;
-    border-left: 75px solid #BCD100;
+    border-left: 75px solid #9FB400;
 }
 #story_page .voting_bar .thumbs_down {
     position: absolute;
@@ -28,15 +36,16 @@
     bottom: 0;
     left: 0;
     right: 50%;
-    background: #DD3300;
+    /*background: #DD3300;*/
+    background: #666666;
     cursor: pointer;
-    padding-top:30px;
+    padding-top:18px;
     text-align: center;
-    border-right: 75px solid #D30;
+    border-right: 75px solid #666666;
 }
 
 #story_page .voting_bar .next_story {
-    background: #000;
+    background: #444444;
     width: 150px;
     height: 150px;
     position: absolute;
