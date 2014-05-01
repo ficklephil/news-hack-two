@@ -2,25 +2,21 @@
     background: #EFE5C6;
 }
 
-/*#vote_page{*/
-    /*background: #EFE5C6;*/
-/*}*/
-
 #vote_page p{
-    /*border:1px solid red;*/
     background: #EFE5C6;
     padding-bottom: 20px;
 }
 
 #vote_page .mood-container{
-    /*border:1px solid red;*/
     padding: 15px;
     height:235px;
 }
 
-#vote_page a{
+#vote_page button{
+    font-family: "Roboto Slab";
     /*border:1px solid red;*/
-    background: #BCD700;
+    background: #DD3300;
+    color: #eeeeee;
     height: 40px;
     border-radius: 9px;
     font-size:1.5em;
@@ -28,6 +24,23 @@
     padding: 7px;
     margin-left: 11px;
     margin-bottom: 15px;
+    border:none;
+    cursor: hand;
+}
+
+#vote_page button:hover{
+    background: #444444;
+    color: #eeeeee;
+}
+
+#vote_page .negative{
+    background: #DD3300;
+    color: #eeeeee;
+}
+
+#vote_page .positive{
+    background: #BCD700;
+    color: #eeeeee;
 }
 
 #vote_page a:link{
