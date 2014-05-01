@@ -27,5 +27,12 @@ define(['angular',
                         NavDomain.navigate('/mews/story');
                     })
                 }
+
+                $scope.signup = function() {
+                    console.log("Siging up!")
+                    MyService.send('/user/signup', 'POST', {login:"marcos.carceles@gmail.com"}).then(function() {
+                        console.log(MyService.data());
+                    })
+                }
             }])
     });
