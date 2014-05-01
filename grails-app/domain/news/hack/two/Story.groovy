@@ -3,9 +3,15 @@ package news.hack.two
 class Story {
 
     static constraints = {
+        headline(nullable: true)
+        body(nullable: true, maxSize: 100000)
+        source(nullable: true)
+        publishDate(nullable: true)
     }
 
+    String headline
     String body
+    String source
     Date publishDate
     int ratings = 0
     int happy = 0
