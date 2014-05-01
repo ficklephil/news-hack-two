@@ -53,7 +53,6 @@ define(['angular',
                 }
                 MyService.send('/user/signup', 'POST', {login:$scope.user}).then(function() {
                     $rootScope.user = MyService.data();
-                    console.log("$rootScope.user", $rootScope.user);
                     $scope.$broadcast("CLOSE_SPLASH_OK");
                 })
             };

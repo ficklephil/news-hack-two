@@ -17,12 +17,10 @@ define(['angular',
                 $scope.navDomain = NavDomain;
                 $scope.storyDomain = StoryDomain;
                 $scope.story = StoryDomain.getStory(StoryDomain.index);
-                console.log($scope.story);
 
                 $scope.nextStory = function() {
                     StoryDomain.nextStory();
                     $scope.story = StoryDomain.getStory(StoryDomain.index);
-                    console.log($scope.story);
                 };
 
                 $scope.prevStory = function() {
@@ -37,5 +35,9 @@ define(['angular',
 
                     NavDomain.navigate("/vote/" + type);
                 };
+
+                $scope.isBadImage = function(url) {
+                    return url.match(/.svg.png$/);
+                }
             }])
     });

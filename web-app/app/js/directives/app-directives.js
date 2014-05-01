@@ -26,6 +26,22 @@ define(['angular',
             }
         };
     })
+    /**
+     * Main Menu
+     */
+    .directive('storyImgError', function($compile)
+    {
+        return {
+            restrict: 'A',
+            link: function (scope, element)
+            {
+                element.bind('error', function() {
+                    $(element).parent().hide();
+                });
+            }
+        };
+    })
+
 
 });
 

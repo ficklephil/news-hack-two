@@ -2,7 +2,9 @@
 <div id="story_page">
 <div class="background"></div>
     <h1>{{story.headline}}</h1>
-    <img ng-src="{{story.imageUrl}}" alt="" ng-show="story.imageUrl != null" class="story_image">
+    <div style="background-image:url('{{story.imageUrl}}')" ng-show="story.imageUrl != null && !isBadImage(story.imageUrl)" class="story_image">
+        <img ng-src="{{story.imageUrl}}" alt="" story-img-error style="display: none">
+    </div>
     <p class="source">From {{story.source}}</p>
     <p class="news_story" ng-bind-html="story.body|replaceNewLines"></p>
     <div class="voting_bar">
