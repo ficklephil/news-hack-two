@@ -2,25 +2,35 @@
     background: #EFE5C6;
 }
 
-#vote .mood-container{
+/*#vote_page{*/
+    /*background: #EFE5C6;*/
+/*}*/
+
+#vote_page p{
+    /*border:1px solid red;*/
+    background: #EFE5C6;
+    padding-bottom: 20px;
+}
+
+#vote_page .mood-container{
     /*border:1px solid red;*/
     padding: 15px;
     height:235px;
 }
 
-#vote a{
+#vote_page a{
     /*border:1px solid red;*/
     background: #BCD700;
     height: 40px;
     border-radius: 9px;
     font-size:1.5em;
     float:left;
-    padding: 10px;
-    margin-left: 15px;
+    padding: 7px;
+    margin-left: 11px;
     margin-bottom: 15px;
 }
 
-#vote a:link{
+#vote_page a:link{
     color: #efefef;
     text-decoration:none;
 }

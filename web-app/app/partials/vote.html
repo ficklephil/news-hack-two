@@ -1,5 +1,8 @@
 <div id="vote_page">
-    <div ng-repeat="item in moods" ng-click="vote($index)">
-        {{item.mood}}
+    <p>To help improve your personal streams let us know how this story made you feel.</p>
+    <div class="mood-container">
+        <div ng-repeat="item in moods" ng-click="vote($index)">
+            <a href="#">{{item.mood}}</a>
+        </div>
     </div>
 </div>
