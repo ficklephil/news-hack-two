@@ -119,6 +119,55 @@
 					</g:each>
 				</ul>
 			</div>
-		</div>
+
+            <script src="js/jquery/jquery-1.11.0.min.js"></script>
+
+            <h2>POST EXAMPLES</h2>
+
+            <button id="request-stories">REQUEST STORIES</button>
+
+            <script>
+                $('#request-stories').click(function(){
+                    $.ajax({
+                        url:"/story/list",
+                        data: {
+                            happy:0.1,
+                            sad:0.1,
+                            optimistic:0.1,
+                            pesimistic:0.1,
+                            hopeful:0.1,
+                            fearful:0.1,
+                            amused:0.1,
+                            unamused:0.1,
+                            excited:0.1,
+                            angry:0.1,
+                            nostalgic:0,
+                            flabbergasted:0
+                        }
+                    }).done(function(){
+                        console.log("OK!")
+                    })
+                })
+            </script>
+
+            %{--<button id="post-mood">POST MOOD</button>--}%
+            %{--<script>--}%
+                %{--$('#post-mood').click(function(){--}%
+                    %{--$.ajax({--}%
+                        %{--url:"/story/update",--}%
+                        %{--data: {--}%
+                            %{--id:1,--}%
+                            %{--tag:'angry'--}%
+                        %{--}--}%
+                    %{--}).done(function(){--}%
+                        %{--console.log("OK!")--}%
+                    %{--})--}%
+                %{--})--}%
+            %{--</script>--}%
+
+
+
+
+        </div>
 	</body>
 </html>
