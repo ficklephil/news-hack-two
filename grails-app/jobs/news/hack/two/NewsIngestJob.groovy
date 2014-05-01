@@ -1,9 +1,14 @@
 package news.hack.two
 
 import grails.converters.JSON
+import org.codehaus.groovy.grails.web.json.JSONElement
 
 
 class NewsIngestJob {
+
+    def host = "http://data.bbc.co.uk"
+    def apikey = "apikey=G9M5nEpcdIaxAgRiKzmjg3cfPBAsdyIr"
+
     static triggers = {
       simple startDelay: 5000l, repeatInterval: 600000l // execute job once in 5 seconds
 
@@ -11,23 +16,52 @@ class NewsIngestJob {
 
     def execute() {
 
-        log.info("Ingesting news articles")
-        def host = "http://data.bbc.co.uk"
+        println("Ingesting news articles")
+        def sources = [
+                "TheGuardian",
+                "SkyNews",
+                "TheFinancialTimes",
+                "TheMirror",
+                "TheHuffingtonPost",
+                "TheIrishTimes",
+                "TheIrishSun",
+                "NewsWeb"
+
+        ]
+
+        sources.each {
+            def articles = getArticles(it)
+            articles.each { def article ->
+                def fullArticle = getArticle(article.cps_id)
+                createStories(fullArticle)
+            }
+        }
+
+        println "Ingested ${Story.findAll().size()} stories!"
+
+    }
+
+    private void createStories(def article) {
+        Story story = new Story(headline: article.title, body: article.body, source: article.source)
+        story.save(flush: true, failOnError: true)
+    }
+
+    private JSONElement getArticles(String source) {
         def path = "/bbcrd-juicer/articles.json"
 
-        //product[]=NewsWeb&
-        def sources = "product[]=TheGuardian&product[]=SkyNews&product[]=TheFinancialTimes&product[]=TheMirror&product[]=TheHuffingtonPost&product[]=TheIrishTimes&product[]=TheIrishSun"
-        def apikey = "apikey=G9M5nEpcdIaxAgRiKzmjg3cfPBAsdyIr"
-        def dateRange = "published_after=2010-04-20&published_before=2014-05-03"
         def contentFormat = "content_format[]=TextualFormat"
+        def productSource = "product[]=${source}"
 
-        def response = ("${host}${path}?${contentFormat}&${dateRange}&${apikey}&${sources}").toURL().text
+        def response =  ("${host}${path}?${contentFormat}&${apikey}&${productSource}").toURL().text
 
-        def articlesJson = JSON.parse(response)
+        return JSON.parse(response).articles
+    }
 
-        articlesJson.articles.each { def article ->
-            println "id: ${ article.cps_id} | published: ${article.published} | headline: ${article.title} |  source: ${article.source} "
-        }
+    private getArticle(def articleId) {
+        def path = "/bbcrd-juicer/articles/${articleId}.json"
+        def response =  ("${host}${path}?${apikey}").toURL().text
+
+        return JSON.parse(response).article
 
     }
 }
