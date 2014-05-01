@@ -2,6 +2,10 @@
     background: #EFE5C6;
 }
 
+#story_page {
+    overflow: hidden;
+}
+
 
 #story_page .keyword{
     font-size: 1.8em;
@@ -98,8 +102,8 @@
 }
 
 #story_page .story_image {
-    width: 100%;
     max-width: 500px;
+    max-height: 228px;
     margin: 0 auto;
     display: block;
 }
