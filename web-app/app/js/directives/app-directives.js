@@ -14,14 +14,15 @@ define(['angular',
     /**
      * Main Menu
      */
-    .directive('replaceCarriageReturns', function($compile)
+    .directive('okCloseButton', function($compile)
     {
         return {
             restrict: 'A',
             link: function (scope, element)
             {
-                var val = $compile($(element).text().replace(/\r\n|\n|\r/g, "<br />"));
-                $(element).text(val);
+                scope.$on("CLOSE_SPLASH_OK", function() {
+                    $(element).closest(".splash_container").hide();
+                })
             }
         };
     })

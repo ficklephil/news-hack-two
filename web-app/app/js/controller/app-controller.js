@@ -41,5 +41,9 @@ define(['angular',
             // Load Main Menu JSON
             NavDomain.pageId = typeof $location.path().split("/")[2] != "undefined" ? $location.path().split("/")[2] : "home";
             $scope.navDomain = NavDomain;
+
+            $scope.okClick = function() {
+                $scope.$broadcast("CLOSE_SPLASH_OK");
+            }
         }])
     });
