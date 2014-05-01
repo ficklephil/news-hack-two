@@ -1,0 +1,51 @@
+#vote{
+    background: #EFE5C6;
+}
+
+#vote_page p{
+    background: #EFE5C6;
+    padding-bottom: 20px;
+}
+
+#vote_page .mood-container{
+    padding: 15px;
+    height:235px;
+}
+
+#vote_page button{
+    font-family: "Roboto Slab";
+    /*border:1px solid red;*/
+    background: #DD3300;
+    color: #eeeeee;
+    height: 40px;
+    border-radius: 9px;
+    font-size:1.5em;
+    float:left;
+    padding: 7px;
+    margin-left: 11px;
+    margin-bottom: 15px;
+    border:none;
+    cursor: hand;
+}
+
+#vote_page button:hover{
+    background: #444444;
+    color: #eeeeee;
+}
+
+#vote_page .negative{
+    background: #DD3300;
+    color: #eeeeee;
+}
+
+#vote_page .positive{
+    background: #BCD700;
+    color: #eeeeee;
+}
+
+#vote_page a:link{
+    color: #efefef;
+    text-decoration:none;
+}
+
+

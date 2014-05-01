@@ -1,5 +1,27 @@
 <div id="vote_page">
-    <div ng-repeat="item in moods" ng-click="vote($index)">
-        {{item.mood}}
+    <p>To help improve your personal streams let us know how this story made you feel.</p>
+    <div class="mood-container">
+        <div ng-repeat="item in moods" ng-click="vote($index)">
+            <div ng-switch on="item.mood">
+                <div ng-switch-when="Sad">
+                    <button class="negative">{{item.mood}}</button>
+                </div>
+                <div ng-switch-when="Pessimistic">
+                    <button class="negative">{{item.mood}}</button>
+                </div>
+                <div ng-switch-when="Fearful">
+                    <button class="negative">{{item.mood}}</button>
+                </div>
+                <div ng-switch-when="Unamused">
+                    <button class="negative">{{item.mood}}</button>
+                </div>
+                <div ng-switch-when="Angry">
+                    <button class="negative">{{item.mood}}</button>
+                </div>
+                <div ng-switch-default>
+                    <button class="positive">{{item.mood}}</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
