@@ -1,0 +1,38 @@
+[
+    {
+        "mood": "Happy"
+    },
+    {
+        "mood": "Sad"
+    },
+    {
+        "mood": "Optimistic"
+    },
+    {
+        "mood": "Pessimistic"
+    },
+    {
+        "mood": "Hopeful"
+    },
+    {
+        "mood": "Fearful"
+    },
+    {
+        "mood": "Amused"
+    },
+    {
+        "mood": "Unamused"
+    },
+    {
+        "mood": "Excited"
+    },
+    {
+        "mood": "Angry"
+    },
+    {
+        "mood": "Nostalgic"
+    },
+    {
+        "mood": "Flabbergasted"
+    }
+]

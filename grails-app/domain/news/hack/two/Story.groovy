@@ -17,7 +17,7 @@ class Story {
     int happy = 0
     int sad = 0
     int optimistic = 0
-    int pesimistic = 0
+    int pessimistic = 0
     int hopeful = 0
     int fearful = 0
     int amused = 0

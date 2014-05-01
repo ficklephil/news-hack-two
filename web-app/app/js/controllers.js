@@ -3,13 +3,15 @@ define(['angular',
     'appController',
     'homeController',
     'listController',
-    'storyController'],
+    'storyController',
+    'moodVoteController'],
     function (angular,
               $,
               appController,
               homeController,
               listController,
-              storyController)
+              storyController,
+              moodVoteController)
     {
         // Force strict coding
         'use strict';
@@ -17,7 +19,8 @@ define(['angular',
         return angular.module('myApp.controllers', ['myApp.controllers.appController',
                                                     'myApp.controllers.homeController',
                                                     'myApp.controllers.listController',
-                                                    'myApp.controllers.storyController'])
+                                                    'myApp.controllers.storyController',
+                                                    'myApp.controllers.moodVoteController'])
 
 
     });

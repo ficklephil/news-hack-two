@@ -135,7 +135,7 @@
                             happy:0.3,
                             sad:0.1,
                             optimistic:0.1,
-                            pesimistic:0.1,
+                            pessimistic:0.1,
                             hopeful:0.1,
                             fearful:0.1,
                             amused:0.1,

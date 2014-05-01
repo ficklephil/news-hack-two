@@ -8,13 +8,13 @@ define(['angular', 'app'], function(angular, app)
             templateUrl: '/app/partials/home.html',
             controller: 'HomeCtrl'
         });
-        $routeProvider.when('/mews/list', {
-            templateUrl: '/app/partials/list.html',
-            controller: 'ListCtrl'
-        });
         $routeProvider.when('/mews/story', {
             templateUrl: '/app/partials/story.html',
             controller: 'StoryCtrl'
+        });
+        $routeProvider.when('/mews/vote/:type', {
+            templateUrl: '/app/partials/vote.html',
+            controller: 'MoodVoteCtrl'
         });
 
 		$routeProvider.otherwise({

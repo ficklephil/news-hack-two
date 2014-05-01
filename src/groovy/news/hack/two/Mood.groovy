@@ -6,7 +6,7 @@ public enum Mood {
     happy,
     sad,
     optimistic,
-    pesimistic,
+    pessimistic,
     hopeful,
     fearful,
     amused,

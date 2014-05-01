@@ -11,6 +11,7 @@ require.config(
         homeController: 'controller/home-controller',
         listController: 'controller/list-controller',
         storyController: 'controller/story-controller',
+        moodVoteController: 'controller/mood-vote-controller',
         appDirectives: 'directives/app-directives',
         constantSrv:'service/constant-srv',
         constructSrv:'service/construct-srv',

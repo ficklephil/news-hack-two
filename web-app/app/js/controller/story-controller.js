@@ -14,6 +14,7 @@ define(['angular',
          */
             .controller('StoryCtrl',['$scope','$rootScope', 'NavDomain', 'MyService', 'StoryDomain', function ($scope, $rootScope, NavDomain, MyService, StoryDomain)
             {
+                console.log(StoryDomain.getStories());
                 $scope.navDomain = NavDomain;
                 $scope.storyDomain = StoryDomain;
                 $scope.story = StoryDomain.getStory(StoryDomain.index);
@@ -21,15 +22,17 @@ define(['angular',
                 $scope.nextStory = function() {
                     StoryDomain.nextStory();
                     $scope.story = StoryDomain.getStory(StoryDomain.index);
-                }
+                };
 
                 $scope.prevStory = function() {
                     StoryDomain.prevStory();
                     $scope.story = StoryDomain.getStory(StoryDomain.index);
-                }
+                };
 
                 $scope.vote = function(type) {
-                      
+                    if(type != "up" && type != "down") return;
+
+                    NavDomain.navigate("/mews/vote/" + type);
                 };
             }])
     });
