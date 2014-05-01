@@ -23,8 +23,6 @@ class NewsIngestJob {
                 "TheFinancialTimes",
                 "TheMirror",
                 "TheHuffingtonPost",
-                "TheIrishTimes",
-                "TheIrishSun",
                 "NewsWeb"
 
         ]
@@ -48,13 +46,21 @@ class NewsIngestJob {
             def publishDate = Date.parse("yyyy-MM-dd'T'HH:mm:ss'Z'", article.published as String)
             def random = new Random()
 
-            Story story = new Story(contentId: article.cps_id, headline: article.title, body: article.body, source: article.source, publishDate: publishDate)
+            def imageUrl = getImageUrl(article)
+            Story story = new Story(contentId: article.cps_id, headline: article.title, body: article.body, source: article.source, publishDate: publishDate, imageUrl: imageUrl)
             Mood.values()*.toString().each { mood ->
                 int rating = random.nextInt(20)
                 story[mood] = rating
                 story.ratings += rating
             }
             story.save(flush: true, failOnError: true)
+        }
+    }
+
+    private getImageUrl(article) {
+        def imageUrl = article.isNull("image") ? null : article.image.src
+        if(imageUrl && article.source == "SkyNews") {
+            return imageUrl.replace("70x50.jpg", "522x293.jpg")
         }
     }
 
