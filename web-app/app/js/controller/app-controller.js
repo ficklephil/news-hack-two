@@ -20,18 +20,22 @@ define(['angular',
         '$route',
         'NavDomain',
         'StoryDomain',
+        'MyService',
         function (
             $scope,
             $rootScope,
             $location,
             $route,
             NavDomain,
-            StoryDomain)
+            StoryDomain,
+            MyService)
         {
             /***********************************/
             // Application scope
             // i.e. Index.html scope level
             /***********************************/
+            $scope.navDomain = NavDomain;
+            $scope.user = "";
 
             // Scope vars
             // Scope properties
@@ -40,10 +44,13 @@ define(['angular',
             /*** MAIN MENU ***/
             // Load Main Menu JSON
             NavDomain.pageId = typeof $location.path().split("/")[2] != "undefined" ? $location.path().split("/")[2] : "home";
-            $scope.navDomain = NavDomain;
 
             $scope.okClick = function() {
-                $scope.$broadcast("CLOSE_SPLASH_OK");
-            }
+                MyService.send('/user/signup', 'POST', {login:$scope.user}).then(function() {
+                    $rootScope.user = MyService.data();
+                    console.log("$rootScope.user", $rootScope.user);
+                    $scope.$broadcast("CLOSE_SPLASH_OK");
+                })
+            };
         }])
     });
