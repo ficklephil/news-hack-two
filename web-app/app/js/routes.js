@@ -4,22 +4,22 @@ define(['angular', 'app'], function(angular, app)
     'use strict';
     return app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider)
     {
-        $routeProvider.when('/mews', {
+        $routeProvider.when('/', {
             templateUrl: '/app/partials/home.html',
             controller: 'HomeCtrl'
         });
-        $routeProvider.when('/mews/story', {
+        $routeProvider.when('/story', {
             templateUrl: '/app/partials/story.html',
             controller: 'StoryCtrl'
         });
-        $routeProvider.when('/mews/vote/:type', {
+        $routeProvider.when('/vote/:type', {
             templateUrl: '/app/partials/vote.html',
             controller: 'MoodVoteCtrl'
         });
 
 		$routeProvider.otherwise({
                 redirectTo: function(routeParams, path, search) {
-                    return '/mews';
+                    return '/';
                 }
 		});
         $locationProvider.html5Mode(true);

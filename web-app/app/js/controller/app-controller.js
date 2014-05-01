@@ -35,7 +35,7 @@ define(['angular',
 
             // Scope vars
             // Scope properties
-            if(StoryDomain.index == -1) NavDomain.navigate('/mews');
+            if(StoryDomain.index == -1) NavDomain.navigate('/');
 
             /*** MAIN MENU ***/
             // Load Main Menu JSON

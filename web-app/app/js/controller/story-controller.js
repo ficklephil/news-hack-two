@@ -22,6 +22,7 @@ define(['angular',
                 $scope.nextStory = function() {
                     StoryDomain.nextStory();
                     $scope.story = StoryDomain.getStory(StoryDomain.index);
+                    console.log($scope.story);
                 };
 
                 $scope.prevStory = function() {
@@ -32,7 +33,7 @@ define(['angular',
                 $scope.vote = function(type) {
                     if(type != "up" && type != "down") return;
 
-                    NavDomain.navigate("/mews/vote/" + type);
+                    NavDomain.navigate("/vote/" + type);
                 };
             }])
     });

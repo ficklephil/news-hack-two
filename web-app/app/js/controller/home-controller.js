@@ -24,7 +24,7 @@ define(['angular',
                     var moodFilters = $scope.items[index]["mood-filter"];
                     MyService.send('/story/list', 'POST', moodFilters).then(function() {
                         StoryDomain.setStories(MyService.data());
-                        NavDomain.navigate('/mews/story');
+                        NavDomain.navigate('/story');
                     })
                 }
 

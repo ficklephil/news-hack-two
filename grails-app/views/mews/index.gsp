@@ -14,7 +14,7 @@
     <script data-main="${resource(dir:"app/js", file: "main.js")}" src="${resource(dir:"app/js/lib/require", file: "require.js")}"></script>
 </head>
 <body id="{{navDomain.pageId}}">
-    <div class="header">mews</div>
+    <div ng-click="navDomain.navigate('/')" class="header">mews</div>
     <div ng-view></div>
 </body>
 </html>
