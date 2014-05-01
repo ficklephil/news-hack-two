@@ -23,8 +23,16 @@ class NewsIngestJob {
                 "TheFinancialTimes",
                 "TheMirror",
                 "TheHuffingtonPost",
-                "NewsWeb"
-
+                "TheNewYorkTimes",
+                "TheTimes",
+                "TheIndependent",
+                "TheEveningStandard",
+                "ExpressStar",
+                "NewsWeb",
+                "TheIrishSun",
+                "TheIrishTimes",
+                "IrishIndependant",
+                "BelfastTelegraph"
         ]
 
         sources.each {
@@ -58,9 +66,18 @@ class NewsIngestJob {
     }
 
     private getImageUrl(article) {
-        def imageUrl = article.isNull("image") ? null : article.image.src
-        if(imageUrl && article.source == "SkyNews") {
-            return imageUrl.replace("70x50.jpg", "522x293.jpg")
+        try {
+            def imageUrl = article.isNull("image") ? null : article.image.src
+            if(imageUrl && article.source == "SkyNews") {
+                return imageUrl.replace("70x50.jpg", "522x293.jpg")
+            } else {
+
+                def response = JSON.parse(("${host}/v1/bbcrd-newslabs/creative-works?uri=${article.url}&${apikey}").toURL().text)
+                return response."@graph"[0].tag?."@set"[0]?.thumbnail
+            }
+        } catch (Exception e) {
+            println "no image found from ${article.source}"
+            return null
         }
     }
 
