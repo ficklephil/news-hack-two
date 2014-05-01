@@ -12,8 +12,13 @@ define(['angular',
         /**
          *
          */
-            .controller('ListCtrl',['$scope','$rootScope', 'NavDomain', function ($scope, $rootScope, NavDomain)
+            .controller('ListCtrl',['$scope','$rootScope', 'NavDomain', 'MyService', 'StoryDomain', function ($scope, $rootScope, NavDomain, MyService, StoryDomain)
             {
                 $scope.navDomain = NavDomain;
+                $scope.storyDomain = StoryDomain;
+
+                MyService.get('/story/list').then(function() {
+                    StoryDomain.setStories(MyService.data());
+                });
             }])
     });

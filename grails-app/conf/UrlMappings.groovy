@@ -11,7 +11,7 @@ class UrlMappings {
 
 		"/"(view:"/index")
 		"500"(view:'/error')
-        "/mews/*"(controller: MewsController, action: 'index')
+        "/mews/$angularRoute"(controller: 'mews', action: 'index')
 
 	}
 }

@@ -14,7 +14,6 @@ define(['angular',
          */
             .controller('HomeCtrl',['$scope','$rootScope', 'NavDomain', function ($scope, $rootScope, NavDomain)
             {
-                console.log("home controller");
                 $scope.navDomain = NavDomain;
             }])
     });

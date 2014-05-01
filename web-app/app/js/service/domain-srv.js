@@ -30,6 +30,27 @@ define(['angular','resource'], function (angular, resource) {
 
 
         return publicApi;
+    })
+
+    /**
+     * Navigation domain
+     *
+     */
+    .factory('StoryDomain', function($location)
+    {
+        var stories = {};
+        /**** PUBLIC ***/
+        var publicApi = {
+            getStories: function() {
+                return stories;
+            },
+            setStories: function(s) {
+                stories = s;
+            }
+        };
+
+
+        return publicApi;
     });
 
 });
