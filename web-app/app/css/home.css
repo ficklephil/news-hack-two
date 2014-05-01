@@ -1,59 +1,59 @@
-#home .item {
+#home_page .item {
     border: 3px solid #000000;
     border-width: 0 0 0 5px;
     font-family: "Roboto Slab";
     cursor: pointer;
 }
 
-#home .item .grey_border {
+#home_page .item .grey_border {
     padding: 50px;
     border: 3px solid #ededed;
     border-width: 0 0 0 5px;
 }
 
-#home .item_1 {
+#home_page .item_1 {
     border-color: #BCD100;
     color: #BCD100;
 }
 
-#home .item_1:hover {
+#home_page .item_1:hover {
     background: #BCD100;
     color: #ffffff;
 }
 
-#home .item_2 {
+#home_page .item_2 {
     border-color: #6DC5E6;
     color: #6DC5E6;
 }
 
-#home .item_2:hover {
+#home_page .item_2:hover {
     background: #6DC5E6;
     color: #ffffff;
 }
-#home .item_3 {
+#home_page .item_3 {
     border-color: #EE5F9F;
     color: #EE5F9F;
 }
 
-#home .item_3:hover {
+#home_page .item_3:hover {
     background: #EE5F9F;
     color: #ffffff;
 }
-#home .item_4 {
+#home_page .item_4 {
     border-color: #58B321;
     color: #58B321;
 }
 
-#home .item_4:hover {
+#home_page .item_4:hover {
     background: #58B321;
     color: #ffffff;
 }
-#home .item_5 {
+#home_page .item_5 {
     border-color: #444444;
     color: #444444;
 }
 
-#home .item_5:hover {
+#home_page .item_5:hover {
     background: #444444;
     color: #ffffff;
 }
