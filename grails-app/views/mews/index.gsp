@@ -16,5 +16,14 @@
 <body id="{{navDomain.pageId}}">
     <div ng-click="navDomain.navigate('/')" class="header">mews</div>
     <div ng-view></div>
+    <div class="splash_container">
+        <div class="splash_background"></div>
+        <div class="splash_screen">
+            <p class="blurb">Welcome to Mews, the worlds first mood driven news stream application. Start by picking a context for your news. Mews will build you a personalised stream of stories from around the web. We will ask you to rate how well these stories fit your current mood. As you vote, Mews will learn and update itself so it constantly gets better at building streams that are the perfect fit for you.</p>
+            <p class="login">Login:</p>
+            <input type="text" />
+            <div class="ok_btn">OK</div>
+        </div>
+    </div>
 </body>
 </html>

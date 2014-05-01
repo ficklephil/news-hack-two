@@ -21,6 +21,62 @@
     font-size: 60px;
 }
 
+.splash_container .splash_screen {
+    background: #444;
+    position: fixed;
+    padding: 15px;
+    top: 150px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+}
+
+.splash_container .splash_background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.splash_container .blurb {
+    font-family: "Roboto Slab";
+    font-size: 14px;
+    padding: 0 0 15px;
+    color: #888888;
+    line-height: 120%;
+}
+
+.splash_container .login {
+    font-family: "Roboto Slab";
+    font-size: 14px;
+    padding: 10px 0 0;
+    color: #888888;
+    line-height: 120%;
+}
+
+.splash_container input {
+    margin: 5px 0 0;
+    width: 100%;
+    font-family: "Roboto Slab";
+    font-size: 15px;
+}
+
+.splash_container .ok_btn {
+    font-family: "Roboto Slab";
+    font-size: 20px;
+    text-align: center;
+    height: 40px;
+    width: 75px;
+    line-height: 40px;
+    border-radius: 7px;
+    background: #BCD100;
+    margin: 10px auto 0;
+    border: 1px solid #2f2f2f;
+    color: #ffffff;
+    cursor: pointer;
+}
+
 h1{
     font-family: "Roboto Slab";
     font-size:1.5em;
