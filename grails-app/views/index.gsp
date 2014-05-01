@@ -83,7 +83,6 @@
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
-		<div id="status" role="complementary">
 			<h1>Application Status</h1>
 			<ul>
 				<li>App version: <g:meta name="app.version"/></li>
@@ -127,6 +126,8 @@
             <button id="request-stories">REQUEST STORIES</button>
 
             <script>
+                var stories = [];
+
                 $('#request-stories').click(function(){
                     $.ajax({
                         url:"/story/list",
@@ -144,26 +145,27 @@
                             nostalgic:0,
                             flabbergasted:0
                         }
+                    }).done(function(data){
+                        console.log(data);
+                        stories = data;
+                    })
+                })
+            </script>
+
+            <button id="post-mood">POST MOOD</button>
+            <script>
+                $('#post-mood').click(function(){
+                    $.ajax({
+                        url:"/story/update",
+                        data: {
+                            id:stories[0].id,
+                            tag:'angry'
+                        }
                     }).done(function(){
                         console.log("OK!")
                     })
                 })
             </script>
-
-            %{--<button id="post-mood">POST MOOD</button>--}%
-            %{--<script>--}%
-                %{--$('#post-mood').click(function(){--}%
-                    %{--$.ajax({--}%
-                        %{--url:"/story/update",--}%
-                        %{--data: {--}%
-                            %{--id:1,--}%
-                            %{--tag:'angry'--}%
-                        %{--}--}%
-                    %{--}).done(function(){--}%
-                        %{--console.log("OK!")--}%
-                    %{--})--}%
-                %{--})--}%
-            %{--</script>--}%
 
 
 
