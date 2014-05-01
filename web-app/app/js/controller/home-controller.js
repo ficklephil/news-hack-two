@@ -19,7 +19,6 @@ define(['angular',
 
                 $scope.enterIndex = function(context) {
                     $rootScope.context = context;
-                    console.log($rootScope.context, $rootScope.user);
                     MyService.send('/story/list', 'POST', {user:$rootScope.user.id, context: $rootScope.context}).then(function() {
                         StoryDomain.setStories(MyService.data());
                         NavDomain.navigate('/story');
