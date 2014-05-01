@@ -12,6 +12,10 @@
     src: local('Lobster'), url(http://themes.googleusercontent.com/static/fonts/lobster/v8/NIaFDq6p6eLpSvtV2DTNDQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
 #up{
     background: #EFE5C6;
 }
@@ -49,9 +53,9 @@
 
 .splash_container .blurb {
     font-family: "Roboto Slab";
-    font-size: 14px;
+    font-size: 1em;
     padding: 0 0 15px;
-    color: #888888;
+    color: #EFE5C4;
     line-height: 120%;
 }
 
@@ -68,6 +72,7 @@
     width: 100%;
     font-family: "Roboto Slab";
     font-size: 15px;
+    height:50px;
 }
 
 .splash_container .ok_btn {
@@ -83,6 +88,13 @@
     border: 1px solid #2f2f2f;
     color: #ffffff;
     cursor: pointer;
+}
+
+.splash_container .error {
+    font-family: "Roboto Slab";
+    font-size: 15px;
+    padding: 5px 0 0;
+    color: #ff0000;
 }
 
 h1{

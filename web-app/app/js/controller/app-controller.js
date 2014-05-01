@@ -36,6 +36,7 @@ define(['angular',
             /***********************************/
             $scope.navDomain = NavDomain;
             $scope.user = "";
+            $scope.userError = "";
 
             // Scope vars
             // Scope properties
@@ -46,6 +47,10 @@ define(['angular',
             NavDomain.pageId = typeof $location.path().split("/")[2] != "undefined" ? $location.path().split("/")[2] : "home";
 
             $scope.okClick = function() {
+                if(!$scope.user.match(/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,4}/)) {
+                    $scope.userError = "Please enter a valid email";
+                    return;
+                }
                 MyService.send('/user/signup', 'POST', {login:$scope.user}).then(function() {
                     $rootScope.user = MyService.data();
                     console.log("$rootScope.user", $rootScope.user);
