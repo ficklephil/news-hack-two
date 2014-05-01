@@ -9,6 +9,7 @@ class Story {
         publishDate(nullable: true)
     }
 
+    String contentId
     String headline
     String body
     String source

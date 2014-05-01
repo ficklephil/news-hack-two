@@ -3,7 +3,7 @@
 }
 
 #story .voting_bar {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -20,6 +20,7 @@
     cursor: pointer;
     padding-top:30px;
     text-align: center;
+    border-left: 75px solid #BCD100;
 }
 #story .voting_bar .thumbs_down {
     position: absolute;
@@ -31,6 +32,7 @@
     cursor: pointer;
     padding-top:30px;
     text-align: center;
+    border-right: 75px solid #D30;
 }
 
 #story .voting_bar .next_story {
