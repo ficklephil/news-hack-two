@@ -20,13 +20,13 @@ class NewsIngestJob {
         def sources = [
                 "TheGuardian",
                 "SkyNews",
-                "TheFinancialTimes",
+//                "TheFinancialTimes",
                 "TheMirror",
-                "TheHuffingtonPost",
-                "TheNewYorkTimes",
-                "TheTimes",
+//                "TheHuffingtonPost",    //has stories but no images
+//                "TheNewYorkTimes",
+//                "TheTimes",
                 "TheIndependent",
-                "TheEveningStandard",
+//                "TheEveningStandard",
                 "ExpressStar",
                 "NewsWeb",
                 "TheIrishSun",
@@ -76,7 +76,6 @@ class NewsIngestJob {
                 return response."@graph"[0].tag?."@set"[0]?.thumbnail
             }
         } catch (Exception e) {
-            println "no image found from ${article.source}"
             return null
         }
     }
