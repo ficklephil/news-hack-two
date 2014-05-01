@@ -70,7 +70,6 @@ class StoryController {
                     ]
             ],
             [
-                    [
                             body:"""
 <!-- start slipsum code -->
 
@@ -105,7 +104,6 @@ class StoryController {
                                     nostalgic:0,
                                     flabbergasted:0,
                             ]
-                    ]
             ],
             [
                     body:"""
