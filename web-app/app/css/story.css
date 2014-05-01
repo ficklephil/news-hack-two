@@ -1,0 +1,26 @@
+#story .voting_bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+}
+
+#story .voting_bar .thumbs_up {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    background: #BCD100;
+    cursor: pointer;
+}
+#story .voting_bar .thumbs_down {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    background: #DD3300;
+    cursor: pointer;
+}

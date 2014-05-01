@@ -15,8 +15,7 @@ class StoryController {
     }
 
     def update() {
-
-        storyService.rateStory(params.id as Integer, params.tag);
+        storyService.rateStory(request.JSON.id as Integer, request.JSON.tag);
 
         render "OK"
 

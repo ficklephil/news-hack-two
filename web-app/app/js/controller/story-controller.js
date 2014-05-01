@@ -27,5 +27,9 @@ define(['angular',
                     StoryDomain.prevStory();
                     $scope.story = StoryDomain.getStory(StoryDomain.index);
                 }
+
+                $scope.vote = function(type) {
+                      
+                };
             }])
     });

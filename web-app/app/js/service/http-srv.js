@@ -125,7 +125,6 @@ define(['angular','resource'], function (angular, resource) {
         // Use for POST, PUT, DELETE methods
         service.send = function(url, method, output) {
             var deffered = $q.defer();
-            console.log('output', output);
             $http({
                 url: url,
                 method: method,
