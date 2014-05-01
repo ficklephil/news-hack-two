@@ -19,12 +19,14 @@ define(['angular',
         '$location',
         '$route',
         'NavDomain',
+        'StoryDomain',
         function (
             $scope,
             $rootScope,
             $location,
             $route,
-            NavDomain)
+            NavDomain,
+            StoryDomain)
         {
             /***********************************/
             // Application scope
@@ -33,6 +35,7 @@ define(['angular',
 
             // Scope vars
             // Scope properties
+            if(StoryDomain.index == -1) NavDomain.navigate('/mews');
 
             /*** MAIN MENU ***/
             // Load Main Menu JSON

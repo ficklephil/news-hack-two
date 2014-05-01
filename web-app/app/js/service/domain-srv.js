@@ -42,12 +42,13 @@ define(['angular','resource'], function (angular, resource) {
         var stories = {};
         /**** PUBLIC ***/
         var publicApi = {
-            index: 0,
+            index: -1,
             getStories: function() {
                 return stories;
             },
             setStories: function(s) {
                 stories = s;
+                this.index = 0;
             },
             getStory: function(index) {
                 return this.getStories()[index];
