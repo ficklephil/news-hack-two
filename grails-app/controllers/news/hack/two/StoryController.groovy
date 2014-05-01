@@ -12,9 +12,14 @@ class StoryController {
 
         def stories = storyService.getStoriesByMood(params);
         render stories as JSON
-//        render hardcoded as JSON
     }
 
-    def post() {}
+    def update() {
+
+        storyService.rateStory(params.id as Integer, params.tag);
+
+        render "OK"
+
+    }
 
 }
