@@ -23,7 +23,7 @@ define(['angular',
 
                 $scope.enterStory = function(index) {
                     StoryDomain.index = index;
-                    NavDomain.navigate('/mews/story');
+                    NavDomain.navigate('/story');
                 }
             }])
     });

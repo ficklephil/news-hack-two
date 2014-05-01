@@ -33,7 +33,7 @@ define(['angular',
                 $scope.vote = function(type) {
                     if(type != "up" && type != "down") return;
 
-                    NavDomain.navigate("/mews/vote/" + type);
+                    NavDomain.navigate("/vote/" + type);
                 };
             }])
     });
