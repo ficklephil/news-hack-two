@@ -9,7 +9,7 @@ define(['angular', 'app'], function(angular, app)
     'use strict';
     return app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider)
     {
-        $routeProvider.when('/mews/index', {
+        $routeProvider.when('/mews', {
             templateUrl: '/app/partials/home.html',
             controller: 'HomeCtrl'
         });
@@ -20,7 +20,7 @@ define(['angular', 'app'], function(angular, app)
 
 		$routeProvider.otherwise({
                 redirectTo: function(routeParams, path, search) {
-                    return '/mews/index';
+                    return '/mews';
                 }
 		});
         $locationProvider.html5Mode(true);
