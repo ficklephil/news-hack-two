@@ -10,7 +10,7 @@ class NewsIngestJob {
     def apikey = "apikey=G9M5nEpcdIaxAgRiKzmjg3cfPBAsdyIr"
 
     static triggers = {
-      simple startDelay: 5000l, repeatInterval: 600000l // execute job once in 5 seconds
+      simple startDelay: 5000l, repeatInterval: 600000l
 
     }
 
@@ -35,6 +35,7 @@ class NewsIngestJob {
                 def fullArticle = getArticle(article.cps_id)
                 createStories(fullArticle)
             }
+            println "Ingested from ${it}"
         }
 
         println "Ingested ${Story.findAll().size()} stories!"
@@ -42,7 +43,15 @@ class NewsIngestJob {
     }
 
     private void createStories(def article) {
-        Story story = new Story(headline: article.title, body: article.body, source: article.source)
+        def publishDate = Date.parse("yyyy-MM-dd'T'HH:mm:ss'Z'", article.published as String)
+        def random = new Random()
+
+        Story story = new Story(headline: article.title, body: article.body, source: article.source, publishDate: publishDate)
+        Mood.values()*.toString().each { mood ->
+            int rating = random.nextInt(20);
+            story[mood] = rating
+            story.ratings += rating;
+        }
         story.save(flush: true, failOnError: true)
     }
 
