@@ -14,10 +14,10 @@ define(['angular',
          */
             .controller('StoryCtrl',['$scope','$rootScope', 'NavDomain', 'MyService', 'StoryDomain', function ($scope, $rootScope, NavDomain, MyService, StoryDomain)
             {
-                console.log(StoryDomain.getStories());
                 $scope.navDomain = NavDomain;
                 $scope.storyDomain = StoryDomain;
                 $scope.story = StoryDomain.getStory(StoryDomain.index);
+                console.log($scope.story);
 
                 $scope.nextStory = function() {
                     StoryDomain.nextStory();

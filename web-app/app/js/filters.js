@@ -16,5 +16,14 @@ define(['angular', 'services'], function (angular, services) {
             return moment(new Date(input*1000)).format("MMM Do YY, h:mm:ss a");
         };
     })
+    /**
+     * replace carriage returns for <br />
+     */
+    .filter('replaceNewLines', function($interpolate, $sce) {
+        return function(input) {
+            if(!input) return "";
+            return $sce.trustAsHtml(input.replace(/\r\n|\r|\n/g, "<br />"));
+        };
+    })
 
 });

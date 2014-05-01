@@ -14,12 +14,14 @@ define(['angular',
     /**
      * Main Menu
      */
-    .directive('TestDirective', function()
+    .directive('replaceCarriageReturns', function($compile)
     {
         return {
             restrict: 'A',
             link: function (scope, element)
             {
+                var val = $compile($(element).text().replace(/\r\n|\n|\r/g, "<br />"));
+                $(element).text(val);
             }
         };
     })

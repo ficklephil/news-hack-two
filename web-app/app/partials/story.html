@@ -1,8 +1,9 @@
 
 <div id="story_page">
 <div class="background"></div>
-    <h1 >{{story.ratings}}</h1>
-    <p>{{story.body}}</p>
+    <h1>{{story.headline}}</h1>
+
+    <p class="news_story" ng-bind-html="story.body|replaceNewLines"></p>
     <!--<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>-->
     <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at interdum libero. Sed volutpat porttitor-->
         <!--mauris. Cras at aliquet purus, sed dictum sem. Maecenas euismod facilisis ligula quis semper. Sed sagittis-->
