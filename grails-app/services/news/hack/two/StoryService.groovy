@@ -2,7 +2,7 @@ package news.hack.two
 
 class StoryService {
 
-    List getStoriesByMood(Map preferences) {
+    List getStoriesByMood(def preferences) {
         List stories = Story.list(max:100, sort:"publishDate", order:"desc");
 
         stories.each { story ->

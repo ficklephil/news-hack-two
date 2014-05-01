@@ -10,7 +10,7 @@ class StoryController {
 
     def list() {
 
-        def stories = storyService.getStoriesByMood(params);
+        def stories = storyService.getStoriesByMood(request.JSON);
         render stories as JSON
     }
 
