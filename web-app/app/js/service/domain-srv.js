@@ -63,6 +63,19 @@ define(['angular','resource'], function (angular, resource) {
 
 
         return publicApi;
+    })
+    /**
+     * Navigation domain
+     *
+     */
+    .factory('LoginDomain', function()
+    {
+        /**** PUBLIC ***/
+        var publicApi = {
+        };
+
+
+        return publicApi;
     });
 
 });
