@@ -16,7 +16,22 @@
     font-family: "Lobster";
     text-align: center;
     padding: 30px;
-    background: #000000;
-    color: #ffffff;
+    background: #444444;
+    color: #EFE5C8;
     font-size: 60px;
+}
+
+h1{
+    font-family: "Roboto Slab";
+    font-size:1.5em;
+    padding: 30px 20px 20px 30px;
+    letter-spacing:3px;
+    color: #888888;
+}
+
+p{
+    font-family: "Roboto Slab";
+    padding: 30px;
+    letter-spacing:3px;
+    color: #888888;
 }
