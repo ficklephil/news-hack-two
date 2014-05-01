@@ -22,7 +22,7 @@ define(['angular',
                 $scope.vote = function(index) {
                     var mood = $scope.moods[index];
                     var story = StoryDomain.getStory(StoryDomain.index);
-                    MyService.send('/story/update', "POST", {id: story.id, tag: mood.mood.toLowerCase()}).then(function() {
+                    MyService.send('/story/update', "POST", {id: story.id, tag: mood.mood.toLowerCase(), user: $rootScope.user.id, context: $rootScope.context, vote: $rootScope.vote } ).then(function() {
                         StoryDomain.nextStory();
                         NavDomain.navigate('/story');
                     });
