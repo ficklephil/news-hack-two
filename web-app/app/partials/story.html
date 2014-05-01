@@ -2,7 +2,8 @@
 <div id="story_page">
 <div class="background"></div>
     <h1>{{story.headline}}</h1>
-
+    <img ng-src="imageUrl" alt="" ng-show="imageUrl != null">
+    <p class="source">From {{story.source}}</p>
     <p class="news_story" ng-bind-html="story.body|replaceNewLines"></p>
     <div class="voting_bar">
         <div class="thumbs_down" ng-click="vote('down')"><img ng-src="/images/dislike.png"/></div>
