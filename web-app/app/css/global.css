@@ -12,6 +12,14 @@
     src: local('Lobster'), url(http://themes.googleusercontent.com/static/fonts/lobster/v8/NIaFDq6p6eLpSvtV2DTNDQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
 }
 
+#up{
+    background: #EFE5C6;
+}
+
+#down{
+    background: #EFE5C6;
+}
+
 .header {
     font-family: "Lobster";
     text-align: center;
