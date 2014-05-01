@@ -1,3 +1,5 @@
+import news.hack.two.MewsController
+
 class UrlMappings {
 
 	static mappings = {
@@ -9,6 +11,7 @@ class UrlMappings {
 
 		"/"(view:"/index")
 		"500"(view:'/error')
+        "/mews/*"(controller: MewsController, action: 'index')
 
 	}
 }

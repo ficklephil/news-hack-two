@@ -1,0 +1,19 @@
+define(['angular',
+    'jquery'
+],
+    function(angular,
+             $) {
+        // Force strict coding
+        'use strict';
+
+        // Create out Angular Module
+        return angular.module('myApp.controllers.listController', ['myApp.services'])
+
+        /**
+         *
+         */
+            .controller('ListCtrl',['$scope','$rootScope', 'NavDomain', function ($scope, $rootScope, NavDomain)
+            {
+                $scope.navDomain = NavDomain;
+            }])
+    });
