@@ -132,7 +132,7 @@
                     $.ajax({
                         url:"/story/list",
                         data: {
-                            happy:0.1,
+                            happy:0.3,
                             sad:0.1,
                             optimistic:0.1,
                             pesimistic:0.1,
@@ -140,8 +140,8 @@
                             fearful:0.1,
                             amused:0.1,
                             unamused:0.1,
-                            excited:0.1,
-                            angry:0.1,
+                            excited:0,
+                            angry:0,
                             nostalgic:0,
                             flabbergasted:0
                         }
@@ -159,7 +159,7 @@
                         url:"/story/update",
                         data: {
                             id:stories[0].id,
-                            tag:'angry'
+                            tag:'happy'
                         }
                     }).done(function(){
                         console.log("OK!")
