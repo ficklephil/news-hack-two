@@ -7,12 +7,14 @@ class Story {
         body(nullable: true, maxSize: 100000)
         source(nullable: true)
         publishDate(nullable: true)
+        imageUrl(nullable: true)
     }
 
     String contentId
     String headline
     String body
     String source
+    String imageUrl
     Date publishDate
     int ratings = 0
     int happy = 0
