@@ -5,16 +5,11 @@
     <img ng-src="{{story.imageUrl}}" alt="" ng-show="story.imageUrl != null" class="story_image">
     <p class="source">From {{story.source}}</p>
     <p class="news_story" ng-bind-html="story.body|replaceNewLines"></p>
-    <!--<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>-->
-    <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at interdum libero. Sed volutpat porttitor-->
-        <!--mauris. Cras at aliquet purus, sed dictum sem. Maecenas euismod facilisis ligula quis semper. Sed sagittis-->
-        <!--fermentum ligula in rhoncus. Curabitur tincidunt sapien vel magna sodales cursus. Aliquam vehicula varius-->
-        <!--turpis vitae blandit. In hac habitasse platea dictumst. Aenean tristique ullamcorper magna, in commodo urna-->
-        <!--condimentum non. Aenean in auctor tortor. Suspendisse sed risus odio. Nunc egestas feugiat tellus id vehicula.</p>-->
-
     <div class="voting_bar">
         <div class="thumbs_down" ng-click="vote('down')"><img ng-src="/images/dislike.png"/></div>
         <div class="thumbs_up" ng-click="vote('up')"><img ng-src="/images/like.png"/></div>
-        <div class="next_story" ng-click="nextStory()"></div>
+        <div class="next_story" ng-click="nextStory()">
+            <img ng-src="/images/play_button.png"/>
+        </div>
     </div>
 </div>

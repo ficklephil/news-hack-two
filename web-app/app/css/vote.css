@@ -5,6 +5,8 @@
 #vote_page p{
     background: #EFE5C6;
     padding-bottom: 20px;
+    padding: 20px;
+    font-family: "Roboto Slab";
 }
 
 #vote_page .mood-container{
