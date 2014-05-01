@@ -18,11 +18,13 @@ define(['angular',
         '$rootScope',
         '$location',
         '$route',
+        'NavDomain',
         function (
             $scope,
             $rootScope,
             $location,
-            $route)
+            $route,
+            NavDomain)
         {
             /***********************************/
             // Application scope
@@ -34,5 +36,7 @@ define(['angular',
 
             /*** MAIN MENU ***/
             // Load Main Menu JSON
+            NavDomain.pageId = typeof $location.path().split("/")[2] != "undefined" ? $location.path().split("/")[2] : "home";
+            $scope.navDomain = NavDomain;
         }])
     });

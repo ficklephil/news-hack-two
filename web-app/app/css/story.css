@@ -1,8 +1,8 @@
-#story{
+#story_page, #story {
     background: #EFE5C6;
 }
 
-#story .voting_bar {
+#story_page .voting_bar {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -10,7 +10,7 @@
     height: 100px;
 }
 
-#story .voting_bar .thumbs_up {
+#story_page .voting_bar .thumbs_up {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -22,7 +22,7 @@
     text-align: center;
     border-left: 75px solid #BCD100;
 }
-#story .voting_bar .thumbs_down {
+#story_page .voting_bar .thumbs_down {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -35,7 +35,7 @@
     border-right: 75px solid #D30;
 }
 
-#story .voting_bar .next_story {
+#story_page .voting_bar .next_story {
     background: #000;
     width: 150px;
     height: 150px;
@@ -44,7 +44,7 @@
     margin-left: -75px;
     border-radius: 100%;
     bottom: -25px;
-    border: 3px solid #FFF;
+    border: 3px solid #EFE5C6;
     cursor: pointer;
 }
 

@@ -13,15 +13,21 @@ define(['angular','resource'], function (angular, resource) {
      * Navigation domain
      *
      */
-    .factory('NavDomain', function($location)
+    .factory('NavDomain', function($location,$rootScope)
     {
 
         /**** PUBLIC ***/
         var publicApi = {
+            pageId: "home",
             navigate: function(url) {
+                this.pageId = updatePageId(url);
                 $location.path(url);
             }
         };
+
+        var updatePageId = function(url) {
+            return typeof url.split("/")[2] != "undefined" ? url.split("/")[2] : "home";
+        }
 
 
         return publicApi;
