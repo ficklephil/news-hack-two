@@ -14,6 +14,8 @@
     right: 0;
     background: #BCD100;
     cursor: pointer;
+    padding-top:30px;
+    text-align: center;
 }
 #story .voting_bar .thumbs_down {
     position: absolute;
@@ -23,4 +25,7 @@
     right: 50%;
     background: #DD3300;
     cursor: pointer;
+    padding-top:30px;
+    text-align: center;
 }
+
