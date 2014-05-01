@@ -12,6 +12,10 @@
     src: local('Lobster'), url(http://themes.googleusercontent.com/static/fonts/lobster/v8/NIaFDq6p6eLpSvtV2DTNDQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
 #up{
     background: #EFE5C6;
 }
@@ -83,6 +87,13 @@
     border: 1px solid #2f2f2f;
     color: #ffffff;
     cursor: pointer;
+}
+
+.splash_container .error {
+    font-family: "Roboto Slab";
+    font-size: 15px;
+    padding: 5px 0 0;
+    color: #ff0000;
 }
 
 h1{
