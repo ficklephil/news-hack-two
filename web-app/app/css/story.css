@@ -52,7 +52,7 @@
 #story_page p.source {
     font-family: "Roboto Slab";
     font-size: 14px;
-    padding: 0px 15px;
+    padding: 10px 15px 0;
     color: #888888;
     line-height: 120%;
 }
@@ -60,9 +60,15 @@
 #story_page p.news_story {
     font-family: "Roboto Slab";
     font-size: 14px;
-    padding: 30px 15px;
+    padding: 15px;
     color: #888888;
     padding-bottom: 150px;
     line-height: 120%;
 }
 
+#story_page .story_image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+}

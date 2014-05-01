@@ -22,6 +22,7 @@ define(['angular',
                 $scope.nextStory = function() {
                     StoryDomain.nextStory();
                     $scope.story = StoryDomain.getStory(StoryDomain.index);
+                    console.log($scope.story);
                 };
 
                 $scope.prevStory = function() {
