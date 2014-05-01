@@ -26,7 +26,7 @@ define(['angular','resource'], function (angular, resource) {
         };
 
         var updatePageId = function(url) {
-            return typeof url.split("/")[2] != "undefined" ? url.split("/")[2] : "home";
+            return typeof url.split("/")[1] != "undefined" ? url.split("/")[1] : "home";
         }
 
 
