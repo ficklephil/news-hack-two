@@ -12,8 +12,9 @@ class StoryService {
         }
 
         stories.sort { a, b ->
-            //return b.score == a.score ? b.ratings - a.ratings : b.score - a.score
-            return (b.score - a.score) * 10000 //Descending order and big to fit in an integer
+            return a.score == b.score?      //If they have the same score
+                    a.ratings - b.ratings : //Display the least rated story (asc order ~ least first)
+                    (b.score - a.score)     //Otherwise display the most relevant (desc order ~ highest rating first)
         }
     }
 
@@ -43,9 +44,9 @@ class StoryService {
     }
 
     private int calculateScore(Story story, Preferences preferences) {
-        double score = 0.0
+        int score = 0
         Mood.values()*.toString().each { mood ->
-            score += (preferences[mood] as Double) * story[mood]/story.ratings
+            score += preferences[mood] * story[mood]
         }
         story.score = score
     }
