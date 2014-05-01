@@ -24,7 +24,7 @@ define(['angular',
                     var story = StoryDomain.getStory(StoryDomain.index);
                     MyService.send('/story/update', "POST", {id: story.id, tag: mood.mood.toLowerCase()}).then(function() {
                         StoryDomain.nextStory();
-//                        NavDomain.navigate()
+                        NavDomain.navigate('/mews/story');
                     });
                 };
             }])
