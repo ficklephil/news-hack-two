@@ -28,16 +28,16 @@
     bottom: 0;
     left: 50%;
     right: 0;
-    background: #666666;
+    background: #444444;
     cursor: pointer;
     padding-top:18px;
     text-align: center;
-    border-left: 75px solid #666666;
+    border-left: 75px solid #444444;
 }
 
 #story_page .voting_bar .thumbs_up:hover {
-    background: #BCD100;
-    border-left: 75px solid #BCD100;
+    background: #1b1b1b;
+    border-left: 75px solid #1b1b1b;
 }
 
 #story_page .voting_bar .thumbs_down {
@@ -47,16 +47,16 @@
     left: 0;
     right: 50%;
     /*background: #DD3300;*/
-    background: #666666;
+    background: #444444;
     cursor: pointer;
     padding-top:18px;
     text-align: center;
-    border-right: 75px solid #666666;
+    border-right: 75px solid #444444;
 }
 
 #story_page .voting_bar .thumbs_down:hover {
-    background: #444444;
-    border-right: 75px solid #444444;
+    background: #1b1b1b;
+    border-right: 75px solid #1b1b1b;
 }
 
 #story_page .voting_bar .next_story {
@@ -75,7 +75,7 @@
 }
 
 #story_page .voting_bar .next_story:hover {
-    background: #ffcc00;
+    background: #1b1b1b;
 }
 
 #story_page .voting_bar .next_story img {
