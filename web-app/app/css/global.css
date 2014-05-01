@@ -53,9 +53,9 @@
 
 .splash_container .blurb {
     font-family: "Roboto Slab";
-    font-size: 14px;
+    font-size: 1em;
     padding: 0 0 15px;
-    color: #888888;
+    color: #EFE5C4;
     line-height: 120%;
 }
 
@@ -72,6 +72,7 @@
     width: 100%;
     font-family: "Roboto Slab";
     font-size: 15px;
+    height:50px;
 }
 
 .splash_container .ok_btn {
