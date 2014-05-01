@@ -56,11 +56,6 @@ class NewsIngestJob {
 
             def imageUrl = getImageUrl(article)
             Story story = new Story(contentId: article.cps_id, headline: article.title, body: article.body, source: article.source, publishDate: publishDate, imageUrl: imageUrl)
-            Mood.values()*.toString().each { mood ->
-                int rating = random.nextInt(20)
-                story[mood] = rating
-                story.ratings += rating
-            }
             story.save(flush: true, failOnError: true)
         }
     }

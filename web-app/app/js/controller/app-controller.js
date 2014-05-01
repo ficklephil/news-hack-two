@@ -44,7 +44,7 @@ define(['angular',
 
             /*** MAIN MENU ***/
             // Load Main Menu JSON
-            NavDomain.pageId = typeof $location.path().split("/")[2] != "undefined" ? $location.path().split("/")[2] : "home";
+            NavDomain.pageId = typeof $location.path().split("/")[1] != "undefined" ? $location.path().split("/")[1] : "home";
 
             $scope.okClick = function() {
                 if(!$scope.user.match(/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,4}/)) {
