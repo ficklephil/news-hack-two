@@ -22,7 +22,7 @@ define(['angular',
 
                 $scope.enterIndex = function(index) {
                     var moodFilters = $scope.items[index]["mood-filter"];
-                    MyService.send('/story/list', 'GET', moodFilters).then(function() {
+                    MyService.send('/story/list', 'POST', moodFilters).then(function() {
                         StoryDomain.setStories(MyService.data());
                         console.log(MyService.data());
                         NavDomain.navigate('/mews/story');
