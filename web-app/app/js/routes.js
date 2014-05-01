@@ -1,8 +1,3 @@
-/**
- * @author Shane Seward
- *
- * Application routes
- */
 define(['angular', 'app'], function(angular, app)
 {
     // Force strict coding
@@ -16,6 +11,10 @@ define(['angular', 'app'], function(angular, app)
         $routeProvider.when('/mews/list', {
             templateUrl: '/app/partials/list.html',
             controller: 'ListCtrl'
+        });
+        $routeProvider.when('/mews/story', {
+            templateUrl: '/app/partials/story.html',
+            controller: 'StoryCtrl'
         });
 
 		$routeProvider.otherwise({

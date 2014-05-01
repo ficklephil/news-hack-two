@@ -1,8 +1,3 @@
-/**
- * @author Shane Seward
- *
- * Application services
- */
 define(['angular','resource'], function (angular, resource) {
 	'use strict';
 	
@@ -130,14 +125,11 @@ define(['angular','resource'], function (angular, resource) {
         // Use for POST, PUT, DELETE methods
         service.send = function(url, method, output) {
             var deffered = $q.defer();
+            console.log('output', output);
             $http({
                 url: url,
-                dataType: 'json',
                 method: method,
-                data: output,
-                headers: {
-                    "Content-Type": "application/json"
-                }
+                data: output
 
             }).success(function (d, status, headers, config) {
                 data = d;

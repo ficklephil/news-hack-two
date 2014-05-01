@@ -1,0 +1,6 @@
+Welcome to Story
+
+<h1 >{{story.ratings}}</h1>
+<p>{{story.body}}</p>
+<div ng-click="prevStory()" ng-hide="storyDomain.index == 0">Previous</div>
+<div ng-click="nextStory()" ng-hide="storyDomain.index == storyDomain.getStories().length-1">Next</div>

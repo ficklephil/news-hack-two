@@ -1,10 +1,3 @@
-/**
- * @author Shane Seward
- *
- * Application Services
- * Consolidate all individual Service modules
- */
-
 define(['angular',
         'resource',
         'httpSrv',

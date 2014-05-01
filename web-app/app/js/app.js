@@ -1,9 +1,3 @@
-/**
- * @author Shane Seward
- *
- * Create Main application and
- * inject all application modules
- */
 define([
 	'angular',
 	'angularroutes',

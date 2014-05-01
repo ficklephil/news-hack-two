@@ -1,12 +1,3 @@
-/**
- * @author Shane Seward
- *
- * RequireJS starting point
- * Configure and manage all our JS libraries.
- *
- * Whilst Angular takes care of dependency injection,
- * RequireJS is still useful for library management and batching files.
- */
 require.config(
     {
     // Configure library paths and assign an injection reference
@@ -19,6 +10,7 @@ require.config(
         appController: 'controller/app-controller',
         homeController: 'controller/home-controller',
         listController: 'controller/list-controller',
+        storyController: 'controller/story-controller',
         appDirectives: 'directives/app-directives',
         constantSrv:'service/constant-srv',
         constructSrv:'service/construct-srv',

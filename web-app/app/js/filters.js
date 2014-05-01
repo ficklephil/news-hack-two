@@ -1,8 +1,3 @@
-/**
- * @author Shane Seward
- *
- * Application filters
- */
 define(['angular', 'services'], function (angular, services) {
 
     // Force strict coding

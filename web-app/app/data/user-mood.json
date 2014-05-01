@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "mood": "Ready for a new day",
+        "mood-filter": {
+            "happy":0.1,
+            "sad":0.1,
+            "optimistic":0.1,
+            "pesimistic":0.1,
+            "hopeful":0.1,
+            "fearful":0.1,
+            "amused":0.1,
+            "unamused":0.1,
+            "excited":0.1,
+            "angry":0.1,
+            "nostalgic":0,
+            "flabbergasted":0
+        }
+    },
+    {
+        "id": 2,
+        "mood": "On the move",
+        "mood-filter": {
+            "happy":0.1,
+            "sad":0.1,
+            "optimistic":0.1,
+            "pesimistic":0.1,
+            "hopeful":0.1,
+            "fearful":0.1,
+            "amused":0.1,
+            "unamused":0.1,
+            "excited":0.1,
+            "angry":0.1,
+            "nostalgic":0,
+            "flabbergasted":0
+        }
+    },
+    {
+        "id": 3,
+        "mood": "Need a break",
+        "mood-filter": {
+            "happy":0.1,
+            "sad":0.1,
+            "optimistic":0.1,
+            "pesimistic":0.1,
+            "hopeful":0.1,
+            "fearful":0.1,
+            "amused":0.1,
+            "unamused":0.1,
+            "excited":0.1,
+            "angry":0.1,
+            "nostalgic":0,
+            "flabbergasted":0
+        }
+    },
+    {
+        "id": 4,
+        "mood": "End of the day",
+        "mood-filter": {
+            "happy":0.1,
+            "sad":0.1,
+            "optimistic":0.1,
+            "pesimistic":0.1,
+            "hopeful":0.1,
+            "fearful":0.1,
+            "amused":0.1,
+            "unamused":0.1,
+            "excited":0.1,
+            "angry":0.1,
+            "nostalgic":0,
+            "flabbergasted":0
+        }
+    },
+    {
+        "id": 5,
+        "mood": "Surprise me!",
+        "mood-filter": {
+            "happy":0.1,
+            "sad":0.1,
+            "optimistic":0.1,
+            "pesimistic":0.1,
+            "hopeful":0.1,
+            "fearful":0.1,
+            "amused":0.1,
+            "unamused":0.1,
+            "excited":0.1,
+            "angry":0.1,
+            "nostalgic":0,
+            "flabbergasted":0
+        }
+    }
+]

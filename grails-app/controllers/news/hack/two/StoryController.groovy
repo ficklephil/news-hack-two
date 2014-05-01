@@ -11,7 +11,6 @@ class StoryController {
     def list() {
 
         def stories = storyService.getStoriesByMood(params);
-
         render stories as JSON
 //        render hardcoded as JSON
     }

@@ -1,8 +1,3 @@
-/**
- * @author Shane Seward
- *
- * Application services
- */
 define(['angular','resource'], function (angular, resource) {
 	'use strict';
 	
@@ -36,16 +31,26 @@ define(['angular','resource'], function (angular, resource) {
      * Navigation domain
      *
      */
-    .factory('StoryDomain', function($location)
+    .factory('StoryDomain', function()
     {
         var stories = {};
         /**** PUBLIC ***/
         var publicApi = {
+            index: 0,
             getStories: function() {
                 return stories;
             },
             setStories: function(s) {
                 stories = s;
+            },
+            getStory: function(index) {
+                return this.getStories()[index];
+            },
+            nextStory: function() {
+                this.index++;
+            },
+            prevStory: function() {
+                this.index--;
             }
         };
 

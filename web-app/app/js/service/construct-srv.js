@@ -1,8 +1,3 @@
-/**
- * @author Shane Seward
- *
- * Application services
- */
 define(['angular','resource'], function (angular, resource) {
 	'use strict';
 	

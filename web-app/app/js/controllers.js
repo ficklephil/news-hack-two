@@ -1,26 +1,23 @@
-/**
- * @author Shane Seward
- *
- * Application controllers
- * Consolidate all individual Controller modules
- */
 define(['angular',
     'jquery',
     'appController',
     'homeController',
-    'listController'],
+    'listController',
+    'storyController'],
     function (angular,
               $,
               appController,
               homeController,
-              listController)
+              listController,
+              storyController)
     {
         // Force strict coding
         'use strict';
 
         return angular.module('myApp.controllers', ['myApp.controllers.appController',
                                                     'myApp.controllers.homeController',
-                                                    'myApp.controllers.listController'])
+                                                    'myApp.controllers.listController',
+                                                    'myApp.controllers.storyController'])
 
 
     });

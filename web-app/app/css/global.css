@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(http://themes.googleusercontent.com/static/fonts/robotoslab/v3/y7lebkjgREBJK96VQi37ZrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lobster'), url(http://themes.googleusercontent.com/static/fonts/lobster/v8/NIaFDq6p6eLpSvtV2DTNDQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+
+.header {
+    font-family: "Lobster";
+    text-align: center;
+    padding: 30px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 60px;
+}

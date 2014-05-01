@@ -1,5 +1,5 @@
-<div ng-click="navDomain.navigate('/mews/index')">Welcome to List</div>
+<div ng-click="navDomain.navigate('/mews')">Welcome to List</div>
 
 <ul>
-    <li ng-repeat="item in storyDomain.getStories()">{{item.ratings}}</li>
+    <li ng-repeat="item in storyDomain.getStories()" ng-click="enterStory($index)">{{item.ratings}}</li>
 </ul>

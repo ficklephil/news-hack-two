@@ -20,5 +20,10 @@ define(['angular',
                 MyService.get('/story/list').then(function() {
                     StoryDomain.setStories(MyService.data());
                 });
+
+                $scope.enterStory = function(index) {
+                    StoryDomain.index = index;
+                    NavDomain.navigate('/mews/story');
+                }
             }])
     });
