@@ -102,8 +102,12 @@
 }
 
 #story_page .story_image {
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
     max-width: 500px;
-    max-height: 228px;
+    height: 228px;
     margin: 0 auto;
     display: block;
 }
