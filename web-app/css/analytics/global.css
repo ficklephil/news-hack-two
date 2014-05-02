@@ -126,11 +126,27 @@ input, select {
 .header .analytics {
     font-family: "Roboto Slab";
     background: #444444;
-    color: #ffffff;
+    color: #efefef;
     font-size: 20px;
     margin-left: 20px;
 }
 
+.title {
+    font-family: "Roboto Slab";
+    color: #444444;
+    font-size: 1.4em;
+    padding: 20px 20px 20px 28px;
+}
+
 .chart_container {
     display: inline-block;
+}
+
+.chart_container h1{
+    /*border:1px solid red;*/
+    text-align: center;
+    font-family: 'Roboto Slab';
+    padding: 20px 20px 0px 20px;
+    font-size: 1.4em;
+    color: #444444;
 }

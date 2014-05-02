@@ -15,7 +15,7 @@
 
 <body>
 <div class="header"><span>mews</span><span class="analytics">Analytics</span></div>
-
+<h1 class="title">Moods per source</h1>
 <g:each in="${sources}">
     <div class="chart_container">
         <h1>${it.key}</h1>
@@ -28,7 +28,7 @@
                 labels : ${moodKeys},
                 datasets : [
                     {
-                        fillColor : "rgba(220,220,220,0.5)",
+                        fillColor : "rgba(220,220,220,0.9)",
                         strokeColor : "rgba(220,220,220,1)",
                         pointColor : "rgba(220,220,220,1)",
                         pointStrokeColor : "#fff",
