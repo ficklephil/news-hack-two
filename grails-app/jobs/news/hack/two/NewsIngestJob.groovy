@@ -9,6 +9,24 @@ class NewsIngestJob {
     def host = "http://data.bbc.co.uk"
     def apikey = "apikey=G9M5nEpcdIaxAgRiKzmjg3cfPBAsdyIr"
 
+    static def sources = [
+            "TheGuardian",
+            "SkyNews",
+//                "TheFinancialTimes",
+            "TheMirror",
+//                "TheHuffingtonPost",    //has stories but no images
+//                "TheNewYorkTimes",
+//                "TheTimes",
+            "TheIndependent",
+//                "TheEveningStandard",
+            "ExpressStar",
+            "NewsWeb",
+            "TheIrishSun",
+            "TheIrishTimes",
+            "IrishIndependant",
+            "BelfastTelegraph"
+    ]
+
     static triggers = {
       simple startDelay: 5000l, repeatInterval: 3600000l //every hour
 
@@ -17,23 +35,6 @@ class NewsIngestJob {
     def execute() {
 
         println("Ingesting news articles")
-        def sources = [
-                "TheGuardian",
-                "SkyNews",
-//                "TheFinancialTimes",
-                "TheMirror",
-//                "TheHuffingtonPost",    //has stories but no images
-//                "TheNewYorkTimes",
-//                "TheTimes",
-                "TheIndependent",
-//                "TheEveningStandard",
-                "ExpressStar",
-                "NewsWeb",
-                "TheIrishSun",
-                "TheIrishTimes",
-                "IrishIndependant",
-                "BelfastTelegraph"
-        ]
 
         sources.each {
             def articles = getArticles(it)

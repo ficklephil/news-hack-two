@@ -2,29 +2,36 @@ package news.hack.two
 
 class ChartController {
 
-    def index(String source) {
-        List<Story> stories = Story.findAllBySource(source)
+    private static List moods = ["happy", "sad", "optimistic", "pessimistic", "hopeful", "fearful", "amused", "unamused", "excited", "angry", "nostalgic", "flabbergasted"]
 
-        Map dataSet = [:]
+    def index() {
 
-        [ "happy", "sad", "optimistic", "pessimistic" ,"hopeful","fearful","amused","unamused","excited","angry","nostalgic" ,"flabbergasted" ].each { String mood ->
-            dataSet.put(mood, 0)
-            stories.each { Story story ->
-                dataSet[mood] += story."$mood"
+        Map sources = [:]
+        NewsIngestJob.sources.each { String source  ->
+            List<Story> stories = Story.findAllBySource(source)
+
+            Map dataSet = [:]
+
+            moods.each { String mood ->
+                dataSet.put(mood, 0)
+                stories.each { Story story ->
+                    dataSet[mood] += story."$mood"
+                }
             }
+
+            sources.put(source, dataSet.values())
         }
 
-        def keys = []
-        dataSet.keySet().each {
-            keys << "'${it}'"
+        def moodKeys = []
+        moods.each {
+            moodKeys << "'${it}'"
         }
-        render(view: "index", model: [keys: keys, values: dataSet.values() ])
 
+        render(view: "index", model: [sources: sources, moodKeys: moodKeys] )
     }
 
     def context() {
         List users = User.findAll()
-        def moods = [ "happy", "sad", "optimistic", "pessimistic" ,"hopeful","fearful","amused","unamused","excited","angry","nostalgic" ,"flabbergasted" ]
         def contexts = ["ready","move", "needbreak", "end", "surprise"]
         def dataSet = [:]
         contexts.each { String context ->
