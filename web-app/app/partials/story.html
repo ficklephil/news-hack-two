@@ -5,11 +5,11 @@
     <div style="background-image:url('{{story.imageUrl}}')" ng-show="story.imageUrl != null && !isBadImage(story.imageUrl)" class="story_image">
         <img ng-src="{{story.imageUrl}}" alt="" story-img-error style="display: none">
     </div>
-    <p class="source">From {{story.source}}</p>
+    <p class="source">From <span class="company">{{story.source}}</span></p>
     <p class="news_story" ng-bind-html="story.body|replaceNewLines"></p>
     <div class="voting_bar">
-        <div class="thumbs_down" ng-click="vote('down')"><img ng-src="/images/confused2.png"/></div>
-        <div class="thumbs_up" ng-click="vote('up')"><img ng-src="/images/happy_face4.png"/></div>
+        <div class="thumbs_down" ng-click="vote('down')"><img ng-src="/images/cross.png"/></div>
+        <div class="thumbs_up" ng-click="vote('up')"><img ng-src="/images/tick.png"/></div>
         <div class="next_story" ng-click="nextStory()">
             <img ng-src="/images/play_button.png"/>
         </div>
