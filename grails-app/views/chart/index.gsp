@@ -28,7 +28,7 @@
                 labels : ${moodKeys},
                 datasets : [
                     {
-                        fillColor : "rgba(220,220,220,0.9)",
+                        fillColor : "rgba(220,220,220,0.7)",
                         strokeColor : "rgba(220,220,220,1)",
                         pointColor : "rgba(220,220,220,1)",
                         pointStrokeColor : "#fff",
