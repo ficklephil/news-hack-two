@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title></title>
+    <title>Mews Analytics</title>
     <script data-main="${resource(dir:"app/js", file: "main.js")}" src="${resource(dir:"app/js/lib/chart", file: "Chart.min.js")}"></script>
     <link rel="stylesheet" href="${resource(dir: "css/analytics", file: "global.css")}">
 </head>

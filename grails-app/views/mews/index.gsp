@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html ng-controller="AppCtrl">
 <head>
-  <title></title>
+  <title>Mews</title>
     <link rel="stylesheet" href="${resource(dir:"app/css", file:"all.css")}">
     <script data-main="${resource(dir:"app/js", file: "main.js")}" src="${resource(dir:"app/js/lib/require", file: "require.js")}"></script>
 </head>
