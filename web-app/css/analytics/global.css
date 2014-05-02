@@ -130,3 +130,7 @@ input, select {
     font-size: 20px;
     margin-left: 20px;
 }
+
+.chart_container {
+    display: inline-block;
+}
