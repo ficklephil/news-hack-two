@@ -92,6 +92,11 @@
     line-height: 120%;
 }
 
+#story_page .source .company{
+    font-size: 1.4em;
+    color: #BCD100;
+}
+
 #story_page p.news_story {
     font-family: "Roboto Slab";
     font-size: 14px;
