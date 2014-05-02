@@ -21,4 +21,23 @@ class ChartController {
         render(view: "index", model: [keys: keys, values: dataSet.values() ])
 
     }
+
+    def context() {
+        List users = User.findAll()
+        def moods = [ "happy", "sad", "optimistic", "pessimistic" ,"hopeful","fearful","amused","unamused","excited","angry","nostalgic" ,"flabbergasted" ]
+        def contexts = ["ready","move", "needbreak", "end", "surprise"]
+        def dataSet = [:]
+        contexts.each { String context ->
+            dataSet[context] = [:]
+            users.each { User user ->
+                moods.each { String mood ->
+                    if (!dataSet[context][mood]) dataSet[context][mood] = 0
+                    dataSet[context][mood] += user."$context"."$mood"
+                    if (dataSet[context][mood] < 0) dataSet[context][mood] = 0
+                }
+            }
+        }
+
+        render dataSet
+    }
 }
