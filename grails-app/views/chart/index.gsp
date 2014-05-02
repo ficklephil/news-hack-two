@@ -15,7 +15,7 @@
 
 <body>
 <div class="header"><span>mews</span><span class="analytics">Analytics</span></div>
-<h1 class="title">Moods per source</h1>
+<h1 class="title">Moods per Source</h1>
 <g:each in="${sources}">
     <div class="chart_container">
         <h1>${it.key}</h1>
