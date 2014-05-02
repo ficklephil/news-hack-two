@@ -10,9 +10,11 @@
 <head>
     <title></title>
     <script data-main="${resource(dir:"app/js", file: "main.js")}" src="${resource(dir:"app/js/lib/chart", file: "Chart.min.js")}"></script>
+    <link rel="stylesheet" href="${resource(dir: "css/analytics", file: "global.css")}">
 </head>
 
 <body>
+<div class="header"><span>mews</span><span class="analytics">Analytics</span></div>
 
 <g:each in="${sources}">
     <div>
