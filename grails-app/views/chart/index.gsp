@@ -17,7 +17,7 @@
 <div class="header"><span>mews</span><span class="analytics">Analytics</span></div>
 
 <g:each in="${sources}">
-    <div>
+    <div class="chart_container">
         <h1>${it.key}</h1>
         <canvas id="${it.key}" width="400" height="400"></canvas>
         <script>
