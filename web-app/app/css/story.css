@@ -30,7 +30,8 @@
     right: 0;
     background: #444444;
     cursor: pointer;
-    padding-top:18px;
+    padding-top:26px;
+    padding-left:1px;
     text-align: center;
     border-left: 75px solid #444444;
 }
@@ -49,7 +50,8 @@
     /*background: #DD3300;*/
     background: #444444;
     cursor: pointer;
-    padding-top:18px;
+    padding-top:28px;
+    padding-left: 17px;
     text-align: center;
     border-right: 75px solid #444444;
 }
