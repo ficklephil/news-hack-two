@@ -30,7 +30,7 @@ class Story {
     int nostalgic = 0
     int flabbergasted = 0
 
-    float score
+    int score
 
     static transients =['score']
 }
