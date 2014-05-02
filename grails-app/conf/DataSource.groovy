@@ -26,12 +26,8 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
+            url = "jdbc:h2:prodDb;MVCC=TRUE"
             pooled = true
-            url = "jdbc:postgresql://horton.elephantsql.com:5432/sfsbsodd"
-            driverClassName = "org.postgresql.Driver"
-            username = "sfsbsodd"
-            password = "1_mM6SCqF1XzkCE8Pa3CywWXUGgqjHqf"
-
             properties {
                maxActive = -1
                minEvictableIdleTimeMillis=1800000
